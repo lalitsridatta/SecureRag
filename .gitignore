@@ -1,0 +1,48 @@
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# Streamlit secrets (local override — use Streamlit Cloud secrets instead)
+.streamlit/secrets.toml
+
+# Vector store — rebuilt at runtime on Streamlit Cloud
+vector_store/
+
+# Large ML model folders — not needed for RAG-only deployment
+saved_models/
+saved_models_v2/
+saved_models_v3/
+
+# ML data
+ml/data/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Temp files
+*.tmp
+*.temp
+
+# CSV outputs (evaluation artefacts — large)
+hard_negative_predictions.csv
+hard_negative_misclassifications.csv
+human_like_inference_results.csv
+human_like_error_analysis.csv
