@@ -21,9 +21,11 @@ def _get_secret(key: str, default: str = "") -> str:
     """Read from st.secrets first, fall back to env var."""
     try:
         import streamlit as st
-        val = st.secrets.get(key, "")
-        if val:
-            return val
+        # st.secrets supports direct key access and 'in' operator
+        if key in st.secrets:
+            val = st.secrets[key]
+            if val:
+                return str(val)
     except Exception:
         pass
     return os.getenv(key, default)
