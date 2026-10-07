@@ -1,15 +1,10 @@
-# SecureRAG — Streamlit Cloud deployment requirements
-# Python 3.11 recommended on Streamlit Cloud
+# SecureRAG — Streamlit Cloud deployment
+# Python 3.11+ compatible (Streamlit Cloud uses Python 3.14)
 
-# ── RAG core ──────────────────────────────────────────────────────────────────
-pypdf==3.17.4
-sentence-transformers==3.0.1
-faiss-cpu==1.8.0
-python-dotenv==1.0.1
-
-# ── LLM providers ─────────────────────────────────────────────────────────────
-groq==0.11.0
-httpx==0.27.2
-
-# ── Frontend ──────────────────────────────────────────────────────────────────
-streamlit==1.38.0
+pypdf>=3.17.4
+sentence-transformers>=3.0.1
+faiss-cpu>=1.12.0
+python-dotenv>=1.0.1
+groq>=0.11.0
+httpx>=0.27.2
+streamlit>=1.38.0
